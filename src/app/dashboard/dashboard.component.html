@@ -1,0 +1,107 @@
+<nav class ="navbar navbar-red bg-primary">
+    <div class ="container-fluid">
+        <h1 style="color: rgb(19, 18, 18);">Supplier Data</h1>
+        <div class="d-flex">
+          <!-- <button (click)="clickAddSupplier()" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Add Suppliers</button>  -->
+          <button (click)="clickAddSupplier()" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success" *ngIf="showAddSupplierButton" > Add Suppliers</button>
+
+            <!-- <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-success">Add Suppliers</button> -->
+
+             <button routerLink="/login" class="btn btn-danger mx-2">Logout</button>
+        </div>
+        
+    </div>
+
+</nav>
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope ="col"> ID</th>
+            <th scope ="col"> First Name</th>
+            <th scope ="col"> Last Name</th>
+            <th scope ="col"> Email id</th>
+            <th scope ="col"> Mobile number</th>
+            <th scope ="col"> Product</th>
+            <th scope ="col"> Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of supplierData">
+            <td>{{row.id}}</td>
+            <td>{{row.firstName}}</td>
+            <td>{{row.lastName}}</td>
+            <td>{{row.email}}</td>
+            <td>{{row.mobile}}</td>
+            <td>{{row.product}}</td>
+            <td>
+              <button (click)="onViewProduct(row)" type="button" class="btn btn-secondary mx-3">View Product</button>
+              <button (click)="onEdit(row)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success" *ngIf="showEditButton">Edit</button>
+              <button (click)="deleteSupplier(row)" class="btn btn-danger mx-3" *ngIf="showDeleteButton">Delete</button>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Supplier details</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="formValue">
+            <!-- <div class="form-group">
+              <label for="exampleInputPassword1">SN</label>
+              <input type="number" class="form-control" id="exampleInputPassword1" formControlName="sn">
+            </div> -->
+            <div class="form-group">
+              <label for="exampleInputPassword1">First Name</label>
+              <input type="text" class="form-control" id="exampleInputPassword1" formControlName="firstName">
+            </div>
+            
+            <div class="form-group">
+              <label for="exampleInputEmail1">Last Name</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  formControlName="lastName">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Email id</label>
+              <input type="text" class="form-control" id="exampleInputPassword1"  formControlName="email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Mobile number</label>
+              <input type="text" class="form-control" id="exampleInputPassword1"  formControlName="mobile">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Product</label>
+              <input type="text" class="form-control" id="exampleInputPassword1"  formControlName="product">
+            </div>
+
+            
+              
+              
+            
+          </form>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" id ="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button"  (click)="postSupplierDetails()" class="btn btn-primary">Add</button>
+          <button type="button"  (click)="updateSupplierDetails()" class="btn btn-primary">Update</button> -->
+          <!-- <button *ngIf="showAdd" type="button" (click)="postSupplierDetails()" class="btn btn-primary">Add</button> -->
+          <button *ngIf="showAdd" type="button" (click)="postSupplierDetails()" class="btn btn-primary">Add</button>
+
+          <button *ngIf="showUpdate" type="button" (click)="updateSupplierDetails()" class="btn btn-primary">Update</button>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>

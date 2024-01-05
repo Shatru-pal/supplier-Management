@@ -1,0 +1,118 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "firstName": "Shatru",
+      "lastName": "pal",
+      "email": "122",
+      "mobile": "1224444444",
+      "product": "122"
+    },
+    {
+      "id": 3,
+      "firstName": "modassir",
+      "lastName": "ansari",
+      "email": "ansar@123",
+      "mobile": "9140376556",
+      "product": "xyz"
+    },
+    {
+      "id": 4,
+      "firstName": "hrishikesh",
+      "lastName": "pta_nahi_police_pta_lga_rahi",
+      "email": "b@123",
+      "mobile": "12345678",
+      "product": "kuch_to_hai"
+    },
+    {
+      "id": 5,
+      "firstName": "shatru",
+      "lastName": "pal",
+      "email": "b@124",
+      "mobile": "98765443",
+      "product": "nnbjj"
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "",
+      "email": "shatru@987",
+      "password": "987@123",
+      "mobile": 9876,
+      "id": 1
+    },
+    {
+      "fullname": "",
+      "email": "shatrupal@126",
+      "password": "126@123",
+      "mobile": 9140375771,
+      "id": 2
+    },
+    {
+      "fullname": "",
+      "email": "shatru@987",
+      "password": "123456",
+      "mobile": 123456,
+      "id": 3
+    },
+    {
+      "fullname": "",
+      "email": "1234@1234",
+      "password": "1234@1234",
+      "mobile": 1234,
+      "id": 4
+    },
+    {
+      "fullname": "",
+      "email": "123@123",
+      "password": "1234",
+      "mobile": 123345,
+      "id": 5
+    },
+    {
+      "fullname": "",
+      "email": "987",
+      "password": "987",
+      "mobile": 98,
+      "id": 6
+    },
+    {
+      "fullname": "",
+      "email": "888",
+      "password": "888",
+      "mobile": 8888,
+      "id": 7
+    },
+    {
+      "fullName": "yo yo",
+      "email": "1",
+      "password": "1",
+      "mobile": 1,
+      "id": 8
+    },
+    {
+      "fullName": "yo yo",
+      "email": "2",
+      "password": "2",
+      "mobile": 2,
+      "id": 9
+    },
+    {
+      "fullName": "5",
+      "email": "5",
+      "password": "5",
+      "mobile": 5,
+      "id": 10
+    },
+    {
+      "fullName": "Shatrughn Pal",
+      "email": "shatru@987",
+      "password": "0000",
+      "mobile": 1234567890,
+      "id": 11
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
